@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promedio de Edades Familia</h1>
+
+</body>
+<script>
+    let familia = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+    let edad = 0;
+    let contador = 0;
+    let edadTotal = 0;
+    var promedio;
+    
+    function calculo (familia) {
+        for(contador = 1; contador <= familia; contador++){
+            edad = parseInt(prompt("Ingrese la edad del familiar " + contador))
+            document.write("Edad del miembro "+ contador + " es: "+edad);
+            document.write("<br>");
+            edadTotal = edadTotal + edad;
+        }
+    }
+    
+    function average (edadTotal,familia){
+        promedio = edadTotal/familia;
+    }
+    calculo(familia);
+    average(edadTotal,familia)
+    console.log(promedio);
+    document.write("El promedio de edad en la familia es: " + promedio)
+    console.log(edadTotal);
+    console.log(familia);
+</script>
+</html>
+<!--Variable que guarda cantidad de miembros de familia-->
+<!--Variable que muestra orden de cada miembro sumando +1 cuando 
+    se ingresa una edad de un miembro (i.e. miembro1)-->
+<!--Funcion que pregunta edades de los miembros y los va sumando-->
+<!-- Funcion que muestra el promedio de las edades-->
