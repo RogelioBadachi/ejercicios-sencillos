@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Piramide</h1>
+</body>
+
+<script>
+    const asterisk = "*";
+    let total = 1;
+    let level = parseInt(prompt("Ingrese el numero de niveles de la pirámide: "))
+    
+    for (total = 1; total <= level; total++){
+        //total = level * total;
+        //document.write(total);
+        document.write("<br>");
+        for (j = 0; j < total; j++){
+            document.write(asterisk);
+        }
+    }
+    
+</script>
+
+</html>
