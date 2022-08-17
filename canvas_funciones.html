@@ -12,20 +12,27 @@
     </canvas>
 </body>
 <script>
-    function drawGreenSquare(){
+    var valor = parseInt(prompt("Ingrese el número de veces que desea imprimir un cuadrado: "))
+    let contador = 1;
+    let resultado = 0;
+    let w = h = sw = sh = 0;
+    /* let h = 0;
+    let sw = 0;
+    let sh = 0; */
+    function drawGreenSquare(w,h,sw,sh){
         let pantalla = document.querySelector("canvas");
-    let pincel = pantalla.getContext("2d");
-    pincel.fillStyle = "green";
-    pincel.fillRect(0,0,50,50);
-    pincel.strokeStyle = "black";
-    pincel.strokeRect (0,0,50,50);
-    
-    pincel.fillStyle = "green";
-    pincel.fillRect(50,0,50,50);
-    pincel.strokeStyle = "black";
-    pincel.strokeRect (50,0,50,50);
+        let pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "green";
+        pincel.fillRect(w,h,sw,sh);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect (w,h,sw,sh);
+        
+        /* pincel.fillStyle = "green";
+        pincel.fillRect(50,0,50,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect (50,0,50,50); */
     }
-    drawGreenSquare();
+    drawGreenSquare(0,0,50,50);
 
 </script>
 </html>
