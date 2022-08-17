@@ -19,18 +19,20 @@
     /* let h = 0;
     let sw = 0;
     let sh = 0; */
-    function drawGreenSquare(w,h,sw,sh){
-        let pantalla = document.querySelector("canvas");
-        let pincel = pantalla.getContext("2d");
-        pincel.fillStyle = "green";
-        pincel.fillRect(w,h,sw,sh);
-        pincel.strokeStyle = "black";
-        pincel.strokeRect (w,h,sw,sh);
-        
-        /* pincel.fillStyle = "green";
-        pincel.fillRect(50,0,50,50);
-        pincel.strokeStyle = "black";
-        pincel.strokeRect (50,0,50,50); */
+    while(contador <= valor){
+        function drawGreenSquare(w,h,sw,sh){
+            let pantalla = document.querySelector("canvas");
+            let pincel = pantalla.getContext("2d");
+            pincel.fillStyle = "green";
+            pincel.fillRect(w,h,sw,sh);
+            pincel.strokeStyle = "black";
+            pincel.strokeRect (w,h,sw,sh);
+            
+            /* pincel.fillStyle = "green";
+            pincel.fillRect(50,0,50,50);
+            pincel.strokeStyle = "black";
+            pincel.strokeRect (50,0,50,50); */
+        }
     }
     drawGreenSquare(0,0,50,50);
 
