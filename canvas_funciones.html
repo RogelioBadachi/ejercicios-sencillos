@@ -13,28 +13,31 @@
 </body>
 <script>
     var valor = parseInt(prompt("Ingrese el número de veces que desea imprimir un cuadrado: "))
+    var separacion = parseInt(prompt("Ingrese la separación entre cuadros deseada: "))
     let contador = 1;
     let resultado = 0;
     let w = h = sw = sh = 0;
     /* let h = 0;
     let sw = 0;
     let sh = 0; */
-    while(contador <= valor){
-        function drawGreenSquare(w,h,sw,sh){
+    
+    
+    function drawGreenSquare(w,h,sw,sh){
+        for(contador = 1; contador <= valor; contador++){
             let pantalla = document.querySelector("canvas");
             let pincel = pantalla.getContext("2d");
             pincel.fillStyle = "green";
             pincel.fillRect(w,h,sw,sh);
             pincel.strokeStyle = "black";
-            pincel.strokeRect (w,h,sw,sh);
-            
+            pincel.strokeRect (w,h,sw,sh);                
             /* pincel.fillStyle = "green";
             pincel.fillRect(50,0,50,50);
             pincel.strokeStyle = "black";
             pincel.strokeRect (50,0,50,50); */
-        }
+            w = w + separacion;
+            }
     }
     drawGreenSquare(0,0,50,50);
-
+    console.log(contador);
 </script>
 </html>
